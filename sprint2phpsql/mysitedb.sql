@@ -26,8 +26,8 @@ FOREIGN KEY(pelicula_id) REFERENCES tPeliculas(id));
 INSERT INTO tPeliculas VALUES (1, "Buscando a Nemo", "https://es.web.img3.acsta.net/r_1920_1080/medias/nmedia/18/82/42/43/20076350.jpg", 3, "Infantil, Animación");
 INSERT INTO tPeliculas VALUES (2, "Los Minions 2", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/minions-2-poster-1580755834.jpg", 4, "Infantil, Animación");
 INSERT INTO tPeliculas VALUES (3, "Kung Fu Panda", "https://m.media-amazon.com/images/I/51xlf28jbiL._SX260_.jpg", 5, "Infantil, Animación, Acción y aventuras");
-INSERT INTO tPeliculas VALUES (4, "Interstellar", "https://pics.filmaffinity.com/interstellar-366875261-large.jpg", 5, "Ciencia ficcion, Drama, Aventuras");
-INSERT INTO tPeliculas VALUES (5, "Lilo y stitch", "https://www.sensacine.com/peliculas/pelicula-35143/trailer-19429306/", 3, "Fantástico, Infantil, Animación");
+INSERT INTO tPeliculas VALUES (4, "Interstellar", "https://4.bp.blogspot.com/-6r1mJPRbuz4/XNg0dLNqe3I/AAAAAAAACJE/OCcqoUy1FMYYyVJUN-daa85oLM84S-frwCLcBGAs/s1600/interestellar.jpg", 5, "Ciencia ficcion, Drama, Aventuras");
+INSERT INTO tPeliculas VALUES (5, "El rey León", "https://m.media-amazon.com/images/I/81v-F+xMzmL.jpg", 3, "Infantil, Animación");
 
 INSERT INTO tUsuarios VALUES (1, "Cristina", "Moreno", "cmorenob@gmail.com", "1234");
 INSERT INTO tUsuarios VALUES (2, "Cristian", "Sánchez Bardo", "csanchezb@gmail.com", "1234");
