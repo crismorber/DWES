@@ -2,6 +2,14 @@
 	$db = mysqli_connect('localhost', 'root','1234','mysitedb') or die('Fail'. mysqli_connect_error());
 ?>
 <html>
+	<head>
+		<style>
+			img{
+				height: 344px;
+				width: 260px;
+			}
+		</style>
+	</head>
 	<body>
 		<h1>Conexión establecida</h1>
 		<?php 
