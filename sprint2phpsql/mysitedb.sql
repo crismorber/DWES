@@ -4,7 +4,7 @@ USE mysitedb;
 CREATE TABLE tPeliculas (
 id INTEGER PRIMARY KEY AUTO_INCREMENT, 
 nombre VARCHAR(50), 
-url_imagen (VARCHAR 200), 
+url_imagen VARCHAR (200), 
 director(es) VARCHAR(100), 
 genero (VARCHAR 100));
 
