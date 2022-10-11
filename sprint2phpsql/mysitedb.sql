@@ -1,4 +1,5 @@
-CREATE DATABASE msitedb;
+CREATE DATABASE mysitedb;
+USE mysitedb;
 
 CREATE TABLE tPeliculas (
 id INTEGER PRIMARY KEY AUTO_INCREMENT, 
