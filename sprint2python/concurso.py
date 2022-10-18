@@ -1,14 +1,22 @@
+import random
 print("¡Adivina la respuesta correcta!")
 
 puntuacion=0
-
+veces=0
+repeticion1=0
+repeticion2=0
+repeticion3=0
 preguntas = ["¿En qué año tuvo lugar la pandemia del coronavirus?","¿Cuántos colores tiene el arcoiris?","¿Qué idioma se habla en Moldavia?"]
 
-for i in range(3): 
-    print(preguntas[i])
-    respuesta=None
 
-    if i==0:
+while veces < 3 :
+    numeroRandom=random.randint(1,3)
+    if numeroRandom==1 and repeticion1<2:
+        repeticion1+=1
+        veces+=1
+        print(preguntas[0])
+        respuesta=None
+
         print("a) 2022")
         print("b) 2019")
         print("c) 2020")
@@ -21,7 +29,12 @@ for i in range(3):
         elif (respuesta == "c"):
             print("Respuesta correcta :) Ganas 10 puntos")
             puntuacion = puntuacion + 10
-    if i==1:
+
+    if numeroRandom==2 and repeticion2<2:  
+        repeticion2+=1
+        veces+=1     
+        print(preguntas[1])
+        respuesta=None
         print("a) 7")
         print("b) 9")
         print("c) 8")
@@ -34,7 +47,13 @@ for i in range(3):
         elif (respuesta == "a"):
             print("Respuesta correcta :) Ganas 10 puntos")
             puntuacion = puntuacion + 10
-    if i==2:
+
+    if numeroRandom==3 and repeticion3<2: 
+        repeticion3+=1
+        veces+=1      
+        print(preguntas[2])
+        respuesta=None
+
         print("a) Ruso")
         print("b) Rumano")
         print("c) Inglés")
