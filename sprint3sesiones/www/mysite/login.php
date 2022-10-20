@@ -1,7 +1,7 @@
 <?php 
-    $db = mysqli_connect('localhost', 'root','1234','mysqli') or die('Fail');
+    $db = mysqli_connect('localhost', 'root','1234','mysitedb') or die('Fail');
 
-    $email_poster = $_POST['f_email'];
+    $email_posted = $_POST['f_email'];
     $password_posted = $_POST['f_password'];
 
     $query = 'SELECT id, contraseña FROM tUsuarios where email = "'.$email_posted.'"';
@@ -11,10 +11,10 @@
         if ($only_row[1] == $password_posted){
             session_start();
             $_SESSION['user_id']=$only_row[0];
-            header('Localhost: main.php');
+            header('Location: main.php');
         } else{
             echo '<p>Contraseña incorrecta</p>';
         }
     }else{
-        echo '<p>Usuario no encontrado con ese email</p>'
+        echo '<p>Usuario no encontrado con ese email</p>';
     }
