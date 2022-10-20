@@ -1,13 +1,36 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>Login</h1>
-        <form action="login.php" method="post">
-            <input type="text" name="f_email" placeholder="e-mail"><br>
-            <input type="password" name="f_password" placeholder="contraseña">
-            <input type="submit" value="Iniciar sesión">
-        </form>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("formulario").addEventListener('submit', validarFormulario);
+        });
+
+        function validarFormulario(evento) {
+            evento.preventDefault();
+            var email = document.getElementById('email').value;
+            if (email.length == 0) {
+                alert('No has escrito nada en el email');
+                return;
+            }
+            var contraseña = document.getElementById('contraseña').value;
+            if (contraseña.length == 0) {
+                alert('No has escrito nada en la contraseña');
+                return;
+            }
+            this.submit();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="login.php" method="post" id="formulario">
+        <input type="text" name="f_email" placeholder="e-mail" id="email"><br>
+        <input type="password" name="f_password" placeholder="contraseña" id="contraseña">
+        <input type="submit" value="Iniciar sesión">
+    </form>
+</body>
+
 </html>
