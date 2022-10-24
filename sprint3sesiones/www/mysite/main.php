@@ -7,12 +7,13 @@
 			img{
 				height: 344px;
 				width: 260px;
-				transition: width 0.8s linear 0.2s;
 				transition: height 0.8s linear 0.2s;
 			}
 			img:hover{
 				height: 444pX;
-				width: 360px;
+			}
+			table, td, th{
+				border-collapse: collapse;
 			}
 			th{
 				color: blue;
@@ -31,13 +32,13 @@
 	</head>
 	<body>
 		<h1>Conexión establecida</h1>
-		<table>
+		<table border="1">
 			<tr>
 				<th>ID</th>
 				<th>Título</th>
 				<th>Foto</th>
 				<th>Valoración</th>
-				<td>Género</td>
+				<th>Género</th>
 			</tr>
 			<?php 
 				//Lanzar una query
@@ -53,7 +54,7 @@
 					echo '"></td>';
 					echo '<td>'.$row[3].'</td>';
 					echo '<td>'.$row[4].'</td>';
-					echo '</tr>'
+					echo '</tr>';
 				}
 			?>
 		</table>
