@@ -15,7 +15,7 @@
     if (mysqli_num_rows($result)>0){
         $only_row = mysqli_fetch_array($result);
         if ($only_row[4] == $passwordA_posted){
-            $query = 'UPDATE  tUsuarios SET contraseña = "'.$passwordN_posted.'" WHERE id ='.$id.'; ';
+            $query = "UPDATE  tUsuarios SET contraseña = '".$passwordN_posted."' WHERE id =".$id.'; ';
             $result = mysqli_query($db, $query2) or die('Query error');
             header('Location: main.php');
         } else{
