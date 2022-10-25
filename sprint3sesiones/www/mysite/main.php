@@ -59,5 +59,6 @@
 			?>
 		</table>
         <a href="/logout.php">Logout</a>
+		<a href="/pass.html">Cambiar contraseña</a>
 	</body>
 </html>
