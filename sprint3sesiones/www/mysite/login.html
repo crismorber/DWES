@@ -9,24 +9,14 @@
 
         function validarFormulario(evento) {
             evento.preventDefault();
-            var contraseñaAtigua= document.getElementById('contraseñaAntigua').value;
-            var contraseñaNueva = document.getElementById('contraseñaNueva').value;
-            var contraseñaNueva2 = document.getElementById('contraseñaNueva2').value;
-
-            if (contraseñaAntigua.length == 0) {
-                alert('No has escrito nada en la contraseña antigua');
+            var email = document.getElementById('email').value;
+            if (email.length == 0) {
+                alert('No has escrito nada en el email');
                 return;
             }
-             if (contraseñaNueva.length == 0) {
-                alert('No has escrito nada en la contraseña nueva');
-                return;
-            }
-             if (contraseñaNueva==contraseñaAtigua) {
-                alert('Has escrito la contraseña nueva y la antigua iguales');
-                return;
-            }
-             if (contraseñaNueva!=contraseñaNueva2) {
-                alert('Las contraseñas nuevas no coinciden');
+            var contraseña = document.getElementById('contraseña').value;
+            if (contraseña.length == 0) {
+                alert('No has escrito nada en la contraseña');
                 return;
             }
             this.submit();
@@ -35,13 +25,11 @@
 </head>
 
 <body>
-    <h1>Cambiar contraseña</h1>
-    <form action="pass.php" method="post" id="formulario">
-        <input type="password" name="f_passwordA" placeholder="contraseña antigua" id="contraseñaAntigua"><br>
-        <input type="password" name="f_passwordN" placeholder="contraseña nueva" id="contraseñaNueva"><br>
-        <input type="password" name="f_password" placeholder="contraseña nueva" id="contraseñaNueva2">
-
-        <input type="submit" value="Cambiar contraseña">
+    <h1>Login</h1>
+    <form action="login.php" method="post" id="formulario">
+        <input type="text" name="f_email" placeholder="e-mail" id="email"><br>
+        <input type="password" name="f_password" placeholder="contraseña" id="contraseña">
+        <input type="submit" value="Iniciar sesión">
     </form>
 </body>
 
