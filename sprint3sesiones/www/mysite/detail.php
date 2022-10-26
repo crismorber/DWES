@@ -2,6 +2,14 @@
 	$db = mysqli_connect('localhost','root','1234','mysitedb')or die('Fail');
 ?>
 <html>
+	<head>
+		<style>
+			img{
+				width:260px;
+				height: 344px;
+			}
+		</style>
+	</head>
 	<body>
 		<?php
 			if (!isset($_GET['pelicula_id'])){
@@ -27,9 +35,9 @@
 				while ($row = mysqli_fetch_array($result2) and $row2=mysqli_fetch_array($result3)) {
 					$fecha = $row['fecha'];
 					if (is_null($fecha)) {
-						echo '<li>'.$row['comentario']." ".$row2['nombre']." (Sin fecha registrada) </li>";
+						echo '<li>'.$row['comentarios']." ".$row2['nombre']." (Sin fecha registrada) </li>";
 					}else {
-						echo '<li>'.$row['comentario'].'  '.$row2['nombre']." ".$row['fecha']."</li>";
+						echo '<li>'.$row['comentarios'].'  '.$row2['nombre']." ".$row['fecha']."</li>";
 					}
 				}
 				mysqli_close($db);
