@@ -50,8 +50,9 @@
 					echo '<tr>';
 					echo '<td>'.$row[0].'</td>';
 					echo '<td>'.$row[1].'</td>';
-					echo '<td><img src="'.$row[2];
-					echo '"></td>';
+					echo '<td><a title="imagen" href="/detail.php?pelicula_id='.$row[0];
+					echo '"><img src="'.$row[2];
+					echo '"></a>';
 					echo '<td>'.$row[3].'</td>';
 					echo '<td>'.$row[4].'</td>';
 					echo '</tr>';
